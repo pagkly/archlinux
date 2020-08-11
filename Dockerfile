@@ -27,9 +27,9 @@ ENV LC_ALL en_US.UTF-8
 RUN mkdir -p /nvidia/build
 RUN cd /nvidia/build/
 RUN wget https://us.download.nvidia.com/XFree86/Linux-x86_64/450.57/NVIDIA-Linux-x86_64-450.57.run
-RUN chmod +x NVIDIA*.run
+RUN chmod +x NVIDIA-Linux-x86_64-450.57.run
 RUN ls /nvidia/build
-RUN /nvidia/build/NVIDIA*.run -s -N --no-kernel-module
+RUN /nvidia/build/NVIDIA-Linux-x86_64-450.57.run -s -N --no-kernel-module
 RUN rm -r /nvidia/
 
 #
