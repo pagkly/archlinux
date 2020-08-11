@@ -6,9 +6,13 @@ Installed Versions:
 
 **IMPORTANT**: Host driver version must match exactly
 ## Install
+```
+sudo rm -rf ~/archlinux
+cd ~
 git clone https://github.com/pagkly/archlinux
 cd ./archlinux
 sudo docker build -t archlinux .
+```
 
 ## Run
 RUN container as root with vnc @ 1024x768:
