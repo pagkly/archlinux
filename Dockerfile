@@ -26,10 +26,12 @@ ENV LC_ALL en_US.UTF-8
 # curl -o nvidia-install http://us.download.nvidia.com/XFree86/Linux-x86_64/375.66/NVIDIA-Linux-x86_64-375.66.run && \
 RUN mkdir -p /nvidia/build
 RUN cd /nvidia/build/
-RUN wget https://us.download.nvidia.com/XFree86/Linux-x86_64/450.57/NVIDIA-Linux-x86_64-450.57.run
-RUN chmod +x NVIDIA-Linux-x86_64-450.57.run
+RUN curl -o /nvidia/build/nvidia-driver.run https://us.download.nvidia.com/XFree86/Linux-x86_64/450.57/NVIDIA-Linux-x86_64-450.57.run
+RUN chmod +x /nvidia/build/nvidia-driver.run
 RUN ls /nvidia/build
-RUN /nvidia/build/NVIDIA-Linux-x86_64-450.57.run -s -N --no-kernel-module
+RUN /nvidia/build/nvidia-driver.run -s -N --no-kernel-module
+#-N
+#--no-kernel-module
 RUN rm -r /nvidia/
 
 #
@@ -38,7 +40,7 @@ RUN rm -r /nvidia/
 #
 RUN pacman -S --noconfirm -dd \
                     cuda \
-                    gcc5 \
+                    gcc \
                     libmpc \
                     binutils && \
     pacman -Scc --noconfirm
