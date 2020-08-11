@@ -14,7 +14,7 @@ RUN pacman -Sy --noconfirm \
         curl \
         tar \
         x11vnc xfce4 \
-        python3 python python-pip idle \
+        python3 python python-pip \
         && \
     echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen; locale-gen
 ENV LANG en_US.UTF-8
