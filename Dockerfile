@@ -26,9 +26,9 @@ ENV LC_ALL en_US.UTF-8
 # curl -o nvidia-install http://us.download.nvidia.com/XFree86/Linux-x86_64/375.66/NVIDIA-Linux-x86_64-375.66.run && \
 RUN mkdir -p /nvidia/build
 RUN cd /nvidia/build/
-RUN wget -o nvidia-install https://us.download.nvidia.com/XFree86/Linux-x86_64/450.57/NVIDIA-Linux-x86_64-450.57.run
-RUN chmod +x nvidia-install
-RUN /nvidia/build/nvidia-install -s -N --no-kernel-module
+RUN wget https://us.download.nvidia.com/XFree86/Linux-x86_64/450.57/NVIDIA-Linux-x86_64-450.57.run
+RUN chmod +x NVIDIA*.run
+RUN /nvidia/build/NVIDIA*.run -s -N --no-kernel-module
 RUN rm -r /nvidia/
 
 #
