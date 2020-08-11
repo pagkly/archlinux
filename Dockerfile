@@ -1,4 +1,4 @@
-FROM base/archlinux
+FROM base/archlinux:latest
 
 # Locale settings
 RUN pacman -Sy --noconfirm \
