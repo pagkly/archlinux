@@ -12,6 +12,7 @@ RUN pacman -Sy --noconfirm \
         patch \
         git \
         curl \
+        wget \
         tar \
         x11vnc xfce4 \
         python3 python python-pip \
