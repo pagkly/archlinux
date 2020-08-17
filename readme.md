@@ -6,13 +6,20 @@ Installed Versions:
 
 **IMPORTANT**: Host driver version must match exactly
 ## Install
+#### Linux
 ```
+sudo apt-get update
+sudo apt-get install -y git
+# sudo pacman -S --noconfirm yay pamac
+# yay -S --noconfirm git
 sudo rm -rf ~/dockerarchcuda
 cd ~
 git clone https://github.com/pagkly/dockerarchcuda
 cd ./dockerarchcuda
 sudo docker build -t dockerarchcuda .
 ```
+#### Windows 10
+
 
 ## Run
 RUN container as root with vnc @ 1024x768:
