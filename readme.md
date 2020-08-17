@@ -7,11 +7,11 @@ Installed Versions:
 **IMPORTANT**: Host driver version must match exactly
 ## Install
 ```
-sudo rm -rf ~/archlinux
+sudo rm -rf ~/dockerarchcuda
 cd ~
-git clone https://github.com/pagkly/archlinux
-cd ./archlinux
-sudo docker build -t archlinux .
+git clone https://github.com/pagkly/dockerarchcuda
+cd ./dockerarchcuda
+sudo docker build -t dockerarchcuda .
 ```
 
 ## Run
