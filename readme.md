@@ -19,7 +19,13 @@ cd ./dockerarchcuda
 sudo docker build -t dockerarchcuda .
 ```
 #### Windows 10
-
+```
+cd $env:USERPROFILE
+rmdir /S /Q dockerarchcuda
+git clone https://github.com/pagkly/dockerarchcuda
+cd dockerarchcuda
+docker build -t dockerarchcuda .
+```
 
 ## Run
 RUN container as root with vnc @ 1024x768:
